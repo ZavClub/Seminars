@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Работа на лекции
+// Задача 1. Удалить среднюю цифру из числа
+
+int CutNumber(int num)
+{
+    
+}
