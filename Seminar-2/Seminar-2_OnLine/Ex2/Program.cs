@@ -56,7 +56,7 @@ if (kratNum(number1, number2) == true)
     Console.WriteLine("Да, является");
 else
     Console.WriteLine("Нет, не является");
-    
+
 //Console.WriteLine(KratNum(number1, number2));
 
 //Задача 3. Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
