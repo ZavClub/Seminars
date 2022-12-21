@@ -32,8 +32,8 @@ Console.Clear();
 Console.WriteLine("Сравнение чисел. Какое из трёх чисел больше.");
 Console.WriteLine("Введите 3 числа через пробел или запятую.");
 
-string text = Console.ReadLine();
-string[] words= text.Split(' ', ','); 
+string? text = Console.ReadLine();
+string[] words = text.Split(' ', ',');
 
 int num1 = Convert.ToInt32(words[0]);
 int num2 = Convert.ToInt32(words[1]);
@@ -41,7 +41,9 @@ int num3 = Convert.ToInt32(words[2]);
 
 int max = num1;
 
-if (max < num2) max = num2;
-if (max < num3) max = num3;
+if (max < num2)
+    max = num2;
+if (max < num3)
+    max = num3;
 
 Console.WriteLine($"Максимальное число {max}");
