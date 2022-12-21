@@ -3,7 +3,7 @@
 
 int CutNumber(int num)
 {
-    int sot = num / 10;
+    int sot = num / 100;
     int ed = num % 10;
     int result = sot * 10 + ed;
 
