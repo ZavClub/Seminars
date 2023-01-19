@@ -12,8 +12,8 @@ desktop.ini
 **/log
 *.log
 *.logs
-*.editorconfig
-*.cache
+#*.editorconfig
+#*.cache
 
 *.rsuser
 *.suo
