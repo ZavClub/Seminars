@@ -1,0 +1,15 @@
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\bin\Debug\net7.0\Seminar-1_DZ-2.exe
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\bin\Debug\net7.0\Seminar-1_DZ-2.deps.json
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\bin\Debug\net7.0\Seminar-1_DZ-2.runtimeconfig.json
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\bin\Debug\net7.0\Seminar-1_DZ-2.dll
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\bin\Debug\net7.0\Seminar-1_DZ-2.pdb
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.csproj.AssemblyReference.cache
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.AssemblyInfoInputs.cache
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.AssemblyInfo.cs
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.csproj.CoreCompileInputs.cache
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.dll
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\refint\Seminar-1_DZ-2.dll
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.pdb
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\Seminar-1_DZ-2.genruntimeconfig.cache
+C:\Users\AK\Documents\Seminars\Seminar-1\Seminar-1_DZ-2\obj\Debug\net7.0\ref\Seminar-1_DZ-2.dll
