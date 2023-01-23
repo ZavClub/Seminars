@@ -5,19 +5,17 @@
 int sumNum()
 {
     int sum = 0;
-    string? temp = " "; //= Console.ReadLine();
-    int tmp = 0;
+    string? temp = " ";
+    //int tmp = 0;
     string? keyWord = "";
     while(temp != keyWord)
     {
         temp = Console.ReadLine();
         if (temp != keyWord)
         {
-            tmp = int.Parse(temp);
-            if (tmp > 0)
-            {
-                sum++;
-            }
+            //tmp = int.Parse(temp);
+            bool result = int.TryParse(temp, out var tmp2);
+            if (tmp2 > 0) sum++;
         }
     }
     return sum;
