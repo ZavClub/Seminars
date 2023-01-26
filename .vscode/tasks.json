@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Seminar-4/Seminar-4_DZ-2/Seminar-4_DZ-2.csproj",
+                "${workspaceFolder}/Seminar-8/Seminar-8-DZ_001/Seminar-8-DZ_001.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Seminar-4/Seminar-4_DZ-2/Seminar-4_DZ-2.csproj",
+                "${workspaceFolder}/Seminar-8/Seminar-8-DZ_001/Seminar-8-DZ_001.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Seminar-4/Seminar-4_DZ-2/Seminar-4_DZ-2.csproj"
+                "${workspaceFolder}/Seminar-8/Seminar-8-DZ_001/Seminar-8-DZ_001.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
