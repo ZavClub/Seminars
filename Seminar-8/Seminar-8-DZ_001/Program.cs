@@ -11,13 +11,14 @@
 int[,] CreateRandom2dArray()
 {
     Console.Write("Введите количество строк: ");
-    int rows = 5;//Convert.ToInt32(Console.ReadLine());
+    int rows = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите количество столбцов: ");
-    int columns = 5; //Convert.ToInt32(Console.ReadLine());
+    int columns = Convert.ToInt32(Console.ReadLine());
     Console.Write("Введите минимальное значение: ");
-    int minValue = 10; //Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Введите максимальное значение: ");
-    int maxValue = 99; //Convert.ToInt32(Console.ReadLine());
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите максимальное значение: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine();
 
     int[,] array = new int[rows, columns];
 
@@ -34,26 +35,21 @@ int[,] CreateRandom2dArray()
 void SortingArray(int[,] array)
 {
     int temp = array[0, 0];
-    
+
     for (int i = 0; i < array.GetLength(0); i++)
-    {   
-    int count = 1;
-        while (count > 0)
+    {
+        for(int k = 0; k < array.GetLength(1); k++)
         {
             for (int j = 0; j < array.GetLength(1) - 1; j++)
             {
                 if (array[i, j] < array[i, j + 1])
                 {
-                    count = 0;
                     temp = array[i, j];
                     array[i, j] = array[i, j + 1];
                     array[i, j + 1] = temp;
-                    count++;
-                    Console.WriteLine($"i {i}, j {j}, count {count}");
                 }
             }
         }
-        Console.WriteLine($"count {count}");
     }
 }
 
