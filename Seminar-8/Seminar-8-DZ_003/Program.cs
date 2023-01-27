@@ -7,58 +7,66 @@
 // 15 18
 // http://mathprofi.ru/
 
-Random rnd = new Random();
-int[,] CreateMatrix(int row, int col, int min, int max)
+int[,] CreateRandom2dArray()
 {
-    int[,] matrix = new int[row, col];
+    Console.Clear();
+    Console.Write("Введите количество строк: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите количество столбцов: ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите минимальное значение: ");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите максимальное значение: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine();
 
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int[,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < columns; j++)
         {
-            matrix[i, j] = rnd.Next(min, max + 1);
+            array[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
-    return matrix;
+    return array;
 }
-void PrintMatrix(int[,] matrix)
+
+int[,] MultiplicationMatrix(int[,] matrix1, int[,] matrix2)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        Console.Write("|");
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],1}|");
-            else Console.Write($"{matrix[i, j],1}");
-        }
-        Console.WriteLine("|");
-    }
-}
-int[,] DivMatrix(int[,] matrix1, int[,] matrix2)
-{
-    var matrix3 = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+    int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
     if (matrix1.GetLength(1) == matrix2.GetLength(0))
     {
-        for (int i = 0; i < matrix3.GetLength(0); i++)
+        for (int i = 0; i < result.GetLength(0); i++)
         {
-            for (int j = 0; j < matrix3.GetLength(1); j++)
+            for (int j = 0; j < result.GetLength(1); j++)
             {
-                matrix3[i, j] = 0;
+                result[i, j] = 0;
                 for (int n = 0; n < matrix1.GetLength(1); n++)
                 {
-                    matrix3[i, j] += matrix1[i, n] * matrix2[n, j];
+                    result[i, j] += matrix1[i, n] * matrix2[n, j];
                 }
             }
         }
     }
-    return matrix3;
+    return result;
 }
 
-int[,] array2D = CreateMatrix(rnd.Next(2, 4), rnd.Next(2, 4), 0, 9);
-int[,] matrix = CreateMatrix(rnd.Next(2, 4), rnd.Next(2, 4), 0, 9);
-PrintMatrix(array2D);
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] matrix1 = CreateRandom2dArray();
+int[,] matrix2 = CreateRandom2dArray();
+Show2dArray(matrix1);
 Console.WriteLine();
-PrintMatrix(matrix);
+Show2dArray(matrix2);
 Console.WriteLine();
-PrintMatrix(DivMatrix(array2D, matrix));
-Console.ReadLine();
+Show2dArray(MultiplicationMatrix(matrix1, matrix2));
