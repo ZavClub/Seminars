@@ -5,29 +5,76 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int[,] CreateRandom2dArray()
+int num = 1;
+
+int[,] CreateArray()
 {
     Console.Clear();
-    int rows = 4;
-    int columns = 4;
+    Console.WriteLine("Заполняем массив 4*4 по улитке");
     Console.WriteLine();
 
+    int rows = 4;
+    int columns = 4;
     int[,] array = new int[rows, columns];
-    int runX = 0;
-    int runY = 0;
 
-    for (int count = 1; count <= 16; count++)
-    {
-        if(runX < array.GetLength(0) || runY >= 0 || runY < array.GetLength(1) || runY >= 0)
-        
-        || (array[runX, runY] == 0))
-        {
-            array[runX, runY] = count;
-            runX++;
-        }
-    
-    }
     return array;
+}
+
+void FillArray(int[,] array)
+{
+    int xSize = array.GetLength(0);
+    int ySize = array.GetLength(1);
+    int tmp = xSize * ySize;
+    int x = 0;
+    int y = 0;
+    
+    while (num <= tmp)
+    {
+        for (; y < array.GetLength(1) - 1 && num <= tmp + 1;)
+        {
+            if (array[x, y] == 0)
+            {
+                array[x, y] = num; y++; num++;
+            }
+            else
+            {
+                x++; y++;
+            }
+        }
+        for (; x < array.GetLength(0) - 1 && num <= tmp + 1;)
+        {
+            if (array[x, y] == 0)
+            {
+                array[x, y] = num; x++; num++;
+            }
+            else
+            {
+                x++; y--;
+            }
+        }
+        for (; y > 0 && num <= tmp + 1;)
+        {
+            if (array[x, y] == 0)
+            {
+                array[x, y] = num; y--; num++;
+            }
+            else
+            {
+                x--; y--;
+            }
+        }
+        for (;  x > 0 && num <= tmp + 1;)
+        {
+            if (array[x, y] == 0)
+            {
+                array[x, y] = num; x--; num++;
+            }
+            else
+            {
+                x--; y++;
+            }
+        }
+    }
 }
 
 
@@ -42,7 +89,6 @@ void Show2dArray(int[,] array)
     Console.WriteLine();
 }
 
-Console.Write("Заполняем массив по улитке. Нажмите любую клавишу");
-Console.ReadLine();
-int[,] newArray = CreateRandom2dArray();
+int[,] newArray = CreateArray();
+FillArray(newArray);
 Show2dArray(newArray);
